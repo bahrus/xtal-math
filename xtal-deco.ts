@@ -67,6 +67,10 @@ export class XtalDeco extends HTMLElement {
                         target[key]= propVal;
                     }
                     break;
+                case 'attached':{
+                    subObj(target);
+                    break;
+                }
                 default:
                     switch (typeof (subObj)) {
                         case 'function':
