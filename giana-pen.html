@@ -24,7 +24,6 @@
             on: {
                 click: function(e){
                     const ds = e.target.dataset;
-                    console.log(ds);
                     if(ds.num){
                         if(this.expectNewNumber){
                             this.currentNum = ds.num;
@@ -58,6 +57,13 @@
                                 }
                                 this.lhsOperand = 0;
                                 break;
+                            case 'clear':
+                                console.log('clear');
+                                this.lhsOperand = 0;
+                                this.answerNum = 0;
+                                this.currentNum = '';
+                                break;
+                                
                         }
                     } 
                 }
