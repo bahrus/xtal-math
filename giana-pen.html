@@ -41,7 +41,6 @@
                     }else if(e.target.id === 'equals'){
                         const oldNum = this.currentNum;
                         this.currentNum = '';
-                        //this.expectNewNumber = true;
                         switch(this.lastOp){
                             case 'plus':
                                 this.answerNum = this.lhsOperand + parseFloat(oldNum);
@@ -49,6 +48,9 @@
                                 break;
                             case 'times':
                                 this.answerNum = this.lhsOperand * parseFloat(oldNum);
+                                break;
+                            case 'minus':
+                                this.answerNum = this.lhsOperand - parseFloat(oldNum);
                                 break;
                         }
                         this.lhsOperand = 0;
@@ -59,7 +61,6 @@
                 lhsOperand: 0,
                 expectNewNumber: false,
                 currentNum: '',
-                //resultNum: 0,
                 answerNum: 0,
                 lastOp:'',
             }
