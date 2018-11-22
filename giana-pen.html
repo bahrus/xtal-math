@@ -26,27 +26,32 @@
                     const ds = e.target.dataset;
                     console.log(ds);
                     if(ds.num){
-                        this.currentNum += e.target.dataset.num;
+                        if(this.expectNewNumber){
+                            this.currentNum = ds.num;
+                            this.expectNewNumber = false;
+                        }else{
+                            this.currentNum += ds.num;
+                        }
+                        
 
                     }else if(ds.ops){
                         this.lastOp = ds.ops;
-                        this.resultNum = parseFloat(this.currentNum);
-                        this.currentNum = '';
-                        // switch(ds.ops){
-                        //     case 'plus':
-
-                        //         break;
-                        // }
+                        this.lhsOperand = parseFloat(this.currentNum);
+                        this.expectNewNumber = true;
                     }else if(e.target.id === 'equals'){
                         const oldNum = this.currentNum;
                         this.currentNum = '';
-                        this.answerNum = this.resultNum + parseFloat(oldNum);
+                        //this.expectNewNumber = true;
+                        this.answerNum = this.lhsOperand + parseFloat(oldNum);
+                        this.lhsOperand = 0;
                     }
                 }
             },
             props:{
+                lhsOperand: 0,
+                expectNewNumber: false,
                 currentNum: '',
-                resultNum: 0,
+                //resultNum: 0,
                 answerNum: 0,
                 lastOp:'',
             }
