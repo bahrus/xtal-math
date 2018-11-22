@@ -23,7 +23,7 @@
         ({
             on: {
                 click: function(e){
-                    if(e.target.matches('.num')){
+                    if(e.target.dataset.num){
                         this.currentNum += e.target.dataset.num;
                     }
                 }
