@@ -19,6 +19,6 @@
   "dependencies": {
     "deframe": "0.0.8",
     "xtal-decorator": "0.0.31",
-    "p-d.p-u": "0.0.84"
+    "p-d.p-u": "0.0.85"
   }
 }

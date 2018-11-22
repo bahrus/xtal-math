@@ -23,18 +23,38 @@
         ({
             on: {
                 click: function(e){
-                    if(e.target.dataset.num){
+                    const ds = e.target.dataset;
+                    console.log(ds);
+                    if(ds.num){
                         this.currentNum += e.target.dataset.num;
+
+                    }else if(ds.ops){
+                        this.lastOp = ds.ops;
+                        this.resultNum = parseFloat(this.currentNum);
+                        this.currentNum = '';
+                        // switch(ds.ops){
+                        //     case 'plus':
+
+                        //         break;
+                        // }
+                    }else if(e.target.id === 'equals'){
+                        const oldNum = this.currentNum;
+                        this.currentNum = '';
+                        this.answerNum = this.resultNum + parseFloat(oldNum);
                     }
                 }
             },
             props:{
                 currentNum: '',
+                resultNum: 0,
+                answerNum: 0,
+                lastOp:'',
             }
         })
     </script></xtal-deco>
     <div class="html">
         <p-d-r on="currentNum-changed" to="#viewer" prop="innerHTML" skip-init m="1"></p-d-r>
+        <p-d-r on="answerNum-changed"  to="#viewer" prop="innerHTML" skip-init m="1"></p-d-r>
         <div class="body" p-d-if="p-d-r">
             <h1>JavaScript Calculator</h1>
             <p class="warning">Don't divide by zero</p>
@@ -42,7 +62,6 @@
             <div id="calculator" class="calculator" p-d-if="p-d-r">
 
                 <button id="clear" class="clear">C</button>
-                <!-- <p-s on="click" if=".num" -->
                 <div id="viewer" class="viewer">0</div>
 
                 <button class="num" data-num="7">7</button>
