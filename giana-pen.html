@@ -42,7 +42,15 @@
                         const oldNum = this.currentNum;
                         this.currentNum = '';
                         //this.expectNewNumber = true;
-                        this.answerNum = this.lhsOperand + parseFloat(oldNum);
+                        switch(this.lastOp){
+                            case 'plus':
+                                this.answerNum = this.lhsOperand + parseFloat(oldNum);
+                                
+                                break;
+                            case 'times':
+                                this.answerNum = this.lhsOperand * parseFloat(oldNum);
+                                break;
+                        }
                         this.lhsOperand = 0;
                     }
                 }
