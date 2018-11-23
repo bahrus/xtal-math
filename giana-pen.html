@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="preloadmodule" href="node_modules/xtal-decorator/xtal-deco.js"   as="script">
-    <link rel="preloadmodule" href="node_modules/p-d.p-u/p-d.js" as="script">
-    <link rel="preloadmodule" href="node_modules/p-d.p-u/p-d-r.js" as="script">
-    <link rel="preloadmodule" href="node_modules/p-d.p-u/p-s.js" as="script">
+    <link rel="preloadmodule" href="node_modules/xtal-decorator/xtal-deco.js" as="script">
+    <link rel="preloadmodule" href="node_modules/p-d.p-u/p-u.js" as="script">
     <script type="module">
         import { deframe } from 'deframe/deframe.js';
         import {attach} from './giana-pen.js';
@@ -26,14 +24,14 @@
 <body>
 
 
-    <div class="html">
-        <p-d-r on="currentNum-changed" to="#viewer" prop="innerHTML" skip-init m="1"></p-d-r>
-        <p-d-r on="answerNum-changed"  to="#viewer" prop="innerHTML" skip-init m="1"></p-d-r>
-        <div class="body" p-d-if="p-d-r">
+    <div class="html" disabled>
+        <p-u on="currentNum-changed" to="./viewer" prop="innerHTML" skip-init></p-u>
+        <p-u on="answerNum-changed"  to="./viewer" prop="innerHTML" skip-init></p-u>
+        <div class="body">
             <h1>JavaScript Calculator</h1>
             <p class="warning">Don't divide by zero</p>
 
-            <div id="calculator" class="calculator" p-d-if="p-d-r">
+            <div id="calculator" class="calculator">
 
                 <button id="clear" class="clear">C</button>
                 <div id="viewer" class="viewer">0</div>
@@ -73,6 +71,10 @@
             background-image: radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
             background-attachment: fixed;
             color: #6cacc5;
+        }
+        div.html[disabled]{
+            pointer-events: none;
+            opacity: 0.5;
         }
 
         div.body {
