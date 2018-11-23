@@ -8,17 +8,16 @@ export function attach(target, win) {
                         if (this.expectNewNumber) {
                             this.currentNum = ds.num;
                             this.expectNewNumber = false;
-                        }
-                        else {
+                        } else {
                             this.currentNum += ds.num;
                         }
-                    }
-                    else if (ds.ops) {
+
+
+                    } else if (ds.ops) {
                         this.lastOp = ds.ops;
                         this.lhsOperand = parseFloat(this.currentNum);
                         this.expectNewNumber = true;
-                    }
-                    else {
+                    } else {
                         switch (e.target.id) {
                             case 'equals':
                                 const oldNum = this.currentNum;
@@ -44,6 +43,7 @@ export function attach(target, win) {
                                 this.answerNum = 0;
                                 this.currentNum = '';
                                 break;
+
                         }
                     }
                 }
@@ -56,6 +56,5 @@ export function attach(target, win) {
                 lastOp: '',
             }
         });
-    });
+    })
 }
-//# sourceMappingURL=giana-pen.js.map
