@@ -16,7 +16,7 @@ Yes, yes, a JS based version is also available:  xtal-math-giana-pen-js.js.
 ```
 <custom-element-demo>
   <template>
-    <script type="module" src="https://unpkg.com/xtal-math@0.0.4/xtal-math-giana-pen-js.js?module">
+    <script type="module" src="https://unpkg.com/xtal-math@0.0.4/xtal-math-giana-pen-js.js?module"></script>
     <xtal-math-giana-pen-js></xtal-math-giana-pen-js>
   </template>
 </custom-element-demo>
