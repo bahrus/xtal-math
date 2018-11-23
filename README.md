@@ -1,4 +1,6 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/bahrus/xtal-math)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/xtal-math)
+
+<a href="https://nodei.co/npm/xtal-math/"><img src="https://nodei.co/npm/xtal-math.png"></a>
 
 # \<xtal-math\>
 
