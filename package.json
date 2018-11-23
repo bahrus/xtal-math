@@ -1,6 +1,6 @@
 {
   "name": "xtal-math",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Calculators and stuff",
   "main": "index.js",
   "scripts": {
