@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/bahrus/xtal-math#readme",
   "dependencies": {
-    "deframe": "0.0.9",
+    "deframe": "0.0.10",
     "xtal-decorator": "0.0.32",
     "p-d.p-u": "0.0.88"
   }
