@@ -19,7 +19,7 @@
   "dependencies": {
     "deframe": "0.0.10",
     "xtal-decorator": "0.0.32",
-    "p-d.p-u": "0.0.88"
+    "p-d.p-u": "0.0.91"
   },
   "devDependencies": {
     "@types/node": "^10.12.10",

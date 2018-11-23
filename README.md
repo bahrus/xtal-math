@@ -10,7 +10,18 @@ I provide a web component wrapper around third party math libraries.
 
 For the first one, this may be the world's first web component defined via an iframe.  [Click here to see it in action](https://bahrus.github.io/xtal-math/demo/dev.html).  Note that it progressively renders.  It is a basic calculator, based off the mostly css-based [code-pen](https://codepen.io/giana/pen/GJMBEv).
 
-Yes, yes, a JS based version will be forthcoming for you wimps.
+Yes, yes, a JS based version is also available:  xtal-math-giana-pen-js.js.
+
+<!--
+```
+<custom-element-demo>
+  <template>
+    <script type="module" src="https://unpkg.com/xtal-math@0.0.4/xtal-math-giana-pen-js.js?module">
+    <xtal-math-giana-pen-js></xtal-math-giana-pen-js>
+  </template>
+</custom-element-demo>
+```
+-->
 
 Sincerely,
 
