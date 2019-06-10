@@ -8,15 +8,16 @@
     <title>Document</title>
     <!-- <link rel="preloadmodule" href="node_modules/xtal-decorator/xtal-deco.js" as="script">
     <link rel="preloadmodule" href="node_modules/p-d.p-u/p-u.js" as="script"> -->
-    <link rel="preloadmodule" href="dist/gian-pen-dep.iife.min.js" as="script">
+    <link rel="kvetch" href="dist/gian-pen-dep.iife.min.js" as="script">
     <script type="module">
         import { deframe } from './deframe.min.js';
         import {attach} from './giana-pen.js';
         deframe('xtal-math-giana-pen',{
             attachBehavior: {
                 selector: '.html',
-                attach: attach
-            }
+                attach: attach,
+            },
+            useShadow: true,
         });
     </script>
     <!--https://codepen.io/giana/pen/GJMBEv-->
